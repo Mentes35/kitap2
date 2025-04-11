@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <title>Kitabı Oku</title>
+  <link rel="stylesheet" href="../flipbook/style.css">
+  <style>
+    body {
+      background-color: #eee;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+
+    .flipbook {
+      width: 900px;
+      height: 600px;
+    }
+
+    .flipbook img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  </style>
+</head>
+<body>
+
+<div class="flipbook">
+  <div><img src="../flipbook/pages/1.jpg"></div>
+  <div><img src="../flipbook/pages/2.jpg"></div>
+  <div><img src="../flipbook/pages/3.jpg"></div>
+  <div><img src="../flipbook/pages/4.jpg"></div>
+</div>
+
+<!-- jQuery -->
+<script src="../flipbook/jquery-3.6.0.min.js"></script>
+
+<!-- Turn.js -->
+<script src="../flipbook/turn.min.js"></script>
+
+<!-- Sayfa Çevirme -->
+<script>
+  $(document).ready(function() {
+    $('.flipbook').turn({
+      width: 900,
+      height: 600,
+      autoCenter: true,
+      duration: 1500
+    });
+  });
+</script>
+
+</body>
+</html>
